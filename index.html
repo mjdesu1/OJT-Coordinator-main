@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="0; url=./login.php">-->
+    <link rel="stylesheet" href="./Style/ImportantImport.css">
+    <title>Please Wait...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins";
+        }
+
+        body {
+            background-color: #e4e9f7;
+            background: url(./Image/bg-redirect.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cont {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body class="text-bg-light">
+    <div class="cont container-fluid">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <h1 class="text-dark fw-bold">Please Wait While We Redirect You</h1>
+        <p class="size text-warning"></p>
+        <p class="text-muted">If you are not redirected in 5 seconds, click <a href="./login.php">here</a>.</p>
+    </div>
+    <!-- This is just a esthetic thing, it's not important,
+        but in case it fails to redirect, it will show a link to the login page -->
+    <script>
+        var width = screen.width;
+        var size = document.querySelector(".size");
+
+        if (width < 768) {
+            size.innerHTML = "Your screen is too small for this website you will have a bad experience using it";
+        }
+        setTimeout(function() {
+            window.location.href = "./login.php";
+        }, 5000);
+    </script>
+</body>
+
+</html>

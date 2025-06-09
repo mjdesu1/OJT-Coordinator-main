@@ -1,0 +1,103 @@
+===========================================================
+📌 INSTRUCTIONS TO RUN THE SYSTEM LOCALLY (USING XAMPP)
+===========================================================
+
+SYSTEM TITLE:
+Group9_OJT_MANAGEMENT_SYSTEM_FOR_ASSCAT_COLLEGE_OF_COMPUTING_AND_INFORMATION_SCIENCES
+- Enhancing Application Processing, Evaluation, and Document Management for Trainees and Coordinators
+
+===========================================================
+🔧 REQUIREMENTS:
+===========================================================
+- XAMPP installed (includes Apache & MySQL)
+  Download: https://www.apachefriends.org/index.html
+- A modern browser (Chrome, Firefox, Edge)
+- Text editor (VS Code, Notepad++, etc.)
+
+===========================================================
+📁 STEPS TO SET UP THE SYSTEM LOCALLY:
+===========================================================
+
+1. DOWNLOAD & EXTRACT THE FOLDER
+   - Download:
+     Group9_OJT_MANAGEMENT_SYSTEM_FOR_ASSCAT_COLLEGE_OF_COMPUTING_AND_INFORMATION_SCIENCES_-_Enhancing_Application_Processing_Evaluation_and_Document_Management_for_Trainees_and_Coordinators.zip
+   - Extract it anywhere (e.g., Desktop).
+
+2. MOVE TO XAMPP htdocs DIRECTORY
+   - Go to: C:\xampp\htdocs
+   - Copy the extracted project folder into htdocs
+   - Example path:
+     C:\xampp\htdocs\Group9_OJT_MANAGEMENT_SYSTEM_FOR_ASSCAT...
+
+3. SETUP THE DATABASE
+   - Open XAMPP Control Panel
+   - Start Apache and MySQL modules
+   - Open browser and go to: http://localhost/phpmyadmin
+   - Create a new database named: ojt_db
+   - Click Import, select ojt_db.sql (found inside /database folder)
+   - Click Go to import
+
+4. CONFIGURE DATABASE CONNECTION (if needed)
+   - Open the project folder
+   - Find the config file (e.g., config.php, db.php, or connection.php)
+   - Make sure these values are correct:
+     $host = 'localhost';
+     $user = 'root';
+     $password = '';
+     $database = 'ojt_db';
+
+5. RUN THE SYSTEM
+   - Open browser and go to:
+     http://localhost/Group9_OJT_MANAGEMENT_SYSTEM_FOR_ASSCAT...
+   - You should see the login page of the OJT Management System
+
+6. LOGIN CREDENTIALS (Sample)
+   - Admin:
+     Email: admin@example.com
+     Password: admin123
+   - You may register as Coordinator or Student
+
+===========================================================
+📌 SYSTEM FLOW OVERVIEW
+===========================================================
+
+1. ADMIN
+   - Manage Coordinators and Students
+   - View Reports and System Settings
+
+2. COORDINATOR
+   - Review Student Applications
+   - Track Daily Time Records (DTR)
+   - Upload Evaluations and Documents
+
+3. STUDENT / TRAINEE
+   - Register or login
+   - Submit Application Form
+   - Fill out Daily Time Record (DTR)
+   - Download Certificates or Evaluations
+
+4. DOCUMENTS MODULE
+   - All users can view their files
+   - Coordinators can upload and tag documents
+   - Admin oversees and audits document flow
+
+===========================================================
+📁 FOLDER STRUCTURE
+===========================================================
+
+Group9_OJT_MANAGEMENT_SYSTEM.../
+├── ojtcoordinator/         ← PHP source code
+├── database/
+│   └── ojt_db.sql          ← SQL file to import in phpMyAdmin
+├── documentation/
+│   ├── user-manual.pdf
+│   ├── ERD.png
+│   ├── system-flowchart.png
+├── instructions.txt        ← This instruction file
+└── README.md               ← Optional summary
+
+===========================================================
+✅ PROJECT BY: GROUP 9
+COURSE: Bachelor of Science in Information Technology
+COLLEGE: ASSCAT - College of Computing and Information Sciences
+===========================================================
